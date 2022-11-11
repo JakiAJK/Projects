@@ -1,0 +1,5 @@
+Var1,PSNR,SSIM,MSE
+"Lucy_Richardson",29.96,0.72,37.16
+"Regularisation",18.88,0.22,460.88
+"Blind",25.46,0.66,86.03
+"Wiener",6.17,0.01,8123.93

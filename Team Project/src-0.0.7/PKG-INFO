@@ -1,0 +1,83 @@
+Metadata-Version: 1.1
+Name: src
+Version: 0.0.7
+Summary: UNKNOWN
+Home-page: https://github.com/mitchellrj/src
+Author: Richard Mitchell
+Author-email: mitch@awesomeco.de
+License: Apache 2.0
+Description: src
+        ===
+        
+        Not your source.
+        
+        Because sometimes you mistype filenames or files aren't where you
+        expect them. Package managers should never punish the user by
+        downloading and running remote code in this case.
+        
+        This package mitigates the risk and safely exits in the case that
+        you mistype ``easy_install src`` or ``pip install src`` when no ``src``
+        directory exists.
+        
+        See also:
+        
+        * https://github.com/pypa/pip/issues/1940
+        * https://bitbucket.org/pypa/setuptools/issue/235
+        
+        
+        License
+        =======
+        
+        Copyright 2014 Richard Mitchell
+        
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        
+            http://www.apache.org/licenses/LICENSE-2.0
+        
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        
+        
+        Changes
+        =======
+        
+        0.0.7
+        -----
+        * Updated README to include links to pip and setuptools issues and
+          explain what this package does.
+        * Updated installation script to exit with an error rather than
+          normally.
+        
+        0.0.6
+        -----
+        * Fix option parsing for some versions of distribute / setuptools.
+        * Change license to Apache 2.0.
+        
+        0.0.5
+        -----
+        Fixed behaviour when run with ``easy_install``.
+        
+        0.0.4
+        -----
+        Added manifest to package.
+        
+        0.0.3
+        -----
+        Tagged 0.0.2 already without changing the version number.
+        
+        0.0.2
+        -----
+        Updated README.
+        
+        0.0.1
+        -----
+        Initial version.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers

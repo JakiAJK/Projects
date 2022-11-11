@@ -1,0 +1,288 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/05/12 12:24:46 INFO SparkContext: Running Spark version 3.2.1
+22/05/12 12:24:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/05/12 12:24:47 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+22/05/12 12:24:47 INFO ResourceUtils: ==============================================================
+22/05/12 12:24:47 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/05/12 12:24:47 INFO ResourceUtils: ==============================================================
+22/05/12 12:24:47 INFO SparkContext: Submitted application: Part 1 Assignment 2
+22/05/12 12:24:47 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/05/12 12:24:47 INFO ResourceProfile: Limiting resource is cpu
+22/05/12 12:24:47 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/05/12 12:24:47 INFO SecurityManager: Changing view acls to: acp21jka
+22/05/12 12:24:47 INFO SecurityManager: Changing modify acls to: acp21jka
+22/05/12 12:24:47 INFO SecurityManager: Changing view acls groups to: 
+22/05/12 12:24:47 INFO SecurityManager: Changing modify acls groups to: 
+22/05/12 12:24:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp21jka); groups with view permissions: Set(); users  with modify permissions: Set(acp21jka); groups with modify permissions: Set()
+22/05/12 12:24:47 INFO Utils: Successfully started service 'sparkDriver' on port 43777.
+22/05/12 12:24:47 INFO SparkEnv: Registering MapOutputTracker
+22/05/12 12:24:47 INFO SparkEnv: Registering BlockManagerMaster
+22/05/12 12:24:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/05/12 12:24:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/05/12 12:24:47 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/05/12 12:24:47 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp21jka/blockmgr-6b5b8034-114d-4f70-a934-509a27f7189c
+22/05/12 12:24:47 INFO MemoryStore: MemoryStore started with capacity 5.2 GiB
+22/05/12 12:24:47 INFO SparkEnv: Registering OutputCommitCoordinator
+22/05/12 12:24:48 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/05/12 12:24:48 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+22/05/12 12:24:48 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+22/05/12 12:24:48 WARN Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+22/05/12 12:24:48 WARN Utils: Service 'SparkUI' could not bind on port 4044. Attempting port 4045.
+22/05/12 12:24:48 INFO Utils: Successfully started service 'SparkUI' on port 4045.
+22/05/12 12:24:48 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node174.shef.ac.uk:4045
+22/05/12 12:24:48 INFO Executor: Starting executor ID driver on host sharc-node174.shef.ac.uk
+22/05/12 12:24:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41317.
+22/05/12 12:24:48 INFO NettyBlockTransferService: Server created on sharc-node174.shef.ac.uk:41317
+22/05/12 12:24:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/05/12 12:24:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node174.shef.ac.uk, 41317, None)
+22/05/12 12:24:48 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node174.shef.ac.uk:41317 with 5.2 GiB RAM, BlockManagerId(driver, sharc-node174.shef.ac.uk, 41317, None)
+22/05/12 12:24:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node174.shef.ac.uk, 41317, None)
+22/05/12 12:24:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node174.shef.ac.uk, 41317, None)
+/home/acp21jka/.conda/envs/myspark/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+22/05/12 12:24:49 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/05/12 12:24:49 INFO SharedState: Warehouse path is 'file:/data/acp21jka/ScalableML/HPC/spark-warehouse'.
+/home/acp21jka/.conda/envs/myspark/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/column.py:326: FutureWarning: A column as 'key' in getItem is deprecated as of Spark 3.0, and will not be supported in the future release. Use `column[key]` or `column.key` syntax instead.
+Data after splitting using regex
++--------------------+--------------------+------------------------------------------------------------+---------------+------------------+
+|host                |timestamp           |request                                                     |HTTP reply code|bytes in the reply|
++--------------------+--------------------+------------------------------------------------------------+---------------+------------------+
+|199.72.81.55        |01/Jul/1995:00:00:01|GET /history/apollo/ HTTP/1.0                               |200            |6245              |
+|unicomp6.unicomp.net|01/Jul/1995:00:00:06|GET /shuttle/countdown/ HTTP/1.0                            |200            |3985              |
+|199.120.110.21      |01/Jul/1995:00:00:09|GET /shuttle/missions/sts-73/mission-sts-73.html HTTP/1.0   |200            |4085              |
+|burger.letters.com  |01/Jul/1995:00:00:11|GET /shuttle/countdown/liftoff.html HTTP/1.0                |304            |0                 |
+|199.120.110.21      |01/Jul/1995:00:00:11|GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0|200            |4179              |
+|burger.letters.com  |01/Jul/1995:00:00:12|GET /images/NASA-logosmall.gif HTTP/1.0                     |304            |0                 |
+|burger.letters.com  |01/Jul/1995:00:00:12|GET /shuttle/countdown/video/livevideo.gif HTTP/1.0         |200            |0                 |
+|205.212.115.106     |01/Jul/1995:00:00:12|GET /shuttle/countdown/countdown.html HTTP/1.0              |200            |3985              |
+|d104.aa.net         |01/Jul/1995:00:00:13|GET /shuttle/countdown/ HTTP/1.0                            |200            |3985              |
+|129.94.144.152      |01/Jul/1995:00:00:13|GET / HTTP/1.0                                              |200            |7074              |
++--------------------+--------------------+------------------------------------------------------------+---------------+------------------+
+only showing top 10 rows
+
+Number of rows originally  1891715
+Invalid data-
++----+---------+-------+---------------+------------------+
+|host|timestamp|request|HTTP reply code|bytes in the reply|
++----+---------+-------+---------------+------------------+
+|    |         |       |           null|              null|
++----+---------+-------+---------------+------------------+
+
+Number of rows after removing invalid data  1891714
++--------------------+--------------------+------------------------------------------------------------+---------------+------------------+-------------------+---------+----+
+|host                |timestamp           |request                                                     |HTTP reply code|bytes in the reply|casted_timestamp   |DayOfweek|Week|
++--------------------+--------------------+------------------------------------------------------------+---------------+------------------+-------------------+---------+----+
+|199.72.81.55        |01/Jul/1995:00:00:01|GET /history/apollo/ HTTP/1.0                               |200            |6245              |1995-07-01 00:00:01|7        |26  |
+|unicomp6.unicomp.net|01/Jul/1995:00:00:06|GET /shuttle/countdown/ HTTP/1.0                            |200            |3985              |1995-07-01 00:00:06|7        |26  |
+|199.120.110.21      |01/Jul/1995:00:00:09|GET /shuttle/missions/sts-73/mission-sts-73.html HTTP/1.0   |200            |4085              |1995-07-01 00:00:09|7        |26  |
+|burger.letters.com  |01/Jul/1995:00:00:11|GET /shuttle/countdown/liftoff.html HTTP/1.0                |304            |0                 |1995-07-01 00:00:11|7        |26  |
+|199.120.110.21      |01/Jul/1995:00:00:11|GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0|200            |4179              |1995-07-01 00:00:11|7        |26  |
++--------------------+--------------------+------------------------------------------------------------+---------------+------------------+-------------------+---------+----+
+only showing top 5 rows
+
+Checking for records on or after 29th July
++----+---------+-------+---------------+------------------+----------------+---------+----+
+|host|timestamp|request|HTTP reply code|bytes in the reply|casted_timestamp|DayOfweek|Week|
++----+---------+-------+---------------+------------------+----------------+---------+----+
++----+---------+-------+---------------+------------------+----------------+---------+----+
+
+Filtered data according to DayOfWeek
++----+---------+------+---------+
+|Week|DayOfweek|count |Day      |
++----+---------+------+---------+
+|27  |1        |35272 |Sunday   |
+|29  |1        |39199 |Sunday   |
+|28  |1        |47854 |Sunday   |
+|26  |1        |60265 |Sunday   |
+|30  |2        |64259 |Monday   |
+|28  |2        |72860 |Monday   |
+|29  |2        |74981 |Monday   |
+|27  |2        |89584 |Monday   |
+|30  |3        |62699 |Tuesday  |
+|29  |3        |64282 |Tuesday  |
+|27  |3        |70452 |Tuesday  |
+|28  |3        |80407 |Tuesday  |
+|30  |4        |58849 |Wednesday|
+|29  |4        |72738 |Wednesday|
+|28  |4        |92536 |Wednesday|
+|27  |4        |94575 |Wednesday|
+|30  |5        |61680 |Thursday |
+|29  |5        |66593 |Thursday |
+|27  |5        |100960|Thursday |
+|28  |5        |134203|Thursday |
++----+---------+------+---------+
+only showing top 20 rows
+
+Lowest requests on Sunday are-35272 and Highest are-60265
+-------------------------------------------------------------
+Lowest requests on Monday are-64259 and Highest are-89584
+-------------------------------------------------------------
+Lowest requests on Tuesday are-62699 and Highest are-80407
+-------------------------------------------------------------
+Lowest requests on Wednesday are-58849 and Highest are-94575
+-------------------------------------------------------------
+Lowest requests on Thursday are-61680 and Highest are-134203
+-------------------------------------------------------------
+Lowest requests on Friday are-27121 and Highest are-87233
+-------------------------------------------------------------
+Lowest requests on Saturday are-35267 and Highest are-64714
+-------------------------------------------------------------
+Maximum and Minimum requests on each day of week in July 1995
++---------+----------------+---------------+
+|WeekDay  |Highest requests|Lowest requests|
++---------+----------------+---------------+
+|Sunday   |60265           |35272          |
+|Monday   |89584           |64259          |
+|Tuesday  |80407           |62699          |
+|Wednesday|94575           |58849          |
+|Thursday |134203          |61680          |
+|Friday   |87233           |27121          |
+|Saturday |64714           |35267          |
++---------+----------------+---------------+
+
+=========================================================== MPG requests data part ============================================================
+.mpg filtered data
++---------------------+--------------------+-------------------------------------------------------------------------+---------------+------------------+
+|host                 |timestamp           |request                                                                  |HTTP reply code|bytes in the reply|
++---------------------+--------------------+-------------------------------------------------------------------------+---------------+------------------+
+|scheyer.clark.net    |01/Jul/1995:00:00:58|GET /shuttle/missions/sts-71/movies/sts-71-mir-dock-2.mpg HTTP/1.0       |200            |49152             |
+|pm13.j51.com         |01/Jul/1995:00:01:58|GET /shuttle/missions/sts-71/movies/crew-arrival-t38.mpg HTTP/1.0        |200            |305722            |
+|scheyer.clark.net    |01/Jul/1995:00:02:13|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg HTTP/1.0         |200            |130724            |
+|piweba3y.prodigy.com |01/Jul/1995:00:03:09|GET /shuttle/missions/sts-71/movies/sts-71-tcdt-crew-walkout.mpg HTTP/1.0|200            |647168            |
+|ppp-nyc-3-1.ios.com  |01/Jul/1995:00:04:33|GET /shuttle/missions/sts-71/movies/sts-71-hatch-hand-group.mpg HTTP/1.0 |200            |49152             |
+|199.33.32.50         |01/Jul/1995:00:04:36|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg HTTP/1.0         |200            |130724            |
+|link097.txdirect.net |01/Jul/1995:00:05:38|GET /shuttle/movies/astronauts.mpg HTTP/1.0                              |200            |49152             |
+|svasu.extern.ucsd.edu|01/Jul/1995:00:06:46|GET /history/apollo/apollo-13/movies/apo13inside.mpg HTTP/1.0            |200            |501126            |
+|199.166.39.14        |01/Jul/1995:00:07:37|GET /shuttle/missions/sts-71/movies/sts-71-tcdt-crew-walkout.mpg HTTP/1.0|200            |131072            |
+|pm13.j51.com         |01/Jul/1995:00:07:40|GET /shuttle/missions/sts-71/movies/crew-arrival-t38.mpg HTTP/1.0        |200            |65536             |
++---------------------+--------------------+-------------------------------------------------------------------------+---------------+------------------+
+only showing top 10 rows
+
+Most requested mpg videos
++-------------------------------------------------------------------------+-----+
+|request                                                                  |count|
++-------------------------------------------------------------------------+-----+
+|GET /shuttle/missions/sts-70/movies/woodpecker.mpg HTTP/1.0              |3145 |
+|GET /shuttle/missions/sts-71/movies/crew-arrival-t38.mpg HTTP/1.0        |2594 |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch.mpg HTTP/1.0           |1979 |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg HTTP/1.0         |1910 |
+|GET /shuttle/missions/sts-71/movies/sts-71-tcdt-crew-walkout.mpg HTTP/1.0|1758 |
+|GET /shuttle/missions/sts-71/movies/sts-71-mir-dock.mpg HTTP/1.0         |1556 |
+|GET /history/apollo/apollo-13/movies/apo13damage.mpg HTTP/1.0            |1555 |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch.mpg HTTP/1.0           |1523 |
+|GET /shuttle/missions/sts-71/movies/sts-71-mir-dock-2.mpg HTTP/1.0       |993  |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch-srbsep.mpg HTTP/1.0    |964  |
+|GET /history/apollo/apollo-13/movies/apo13launch.mpg HTTP/1.0            |702  |
+|GET /shuttle/missions/sts-53/movies/sts-53-launch.mpg HTTP/1.0           |658  |
++-------------------------------------------------------------------------+-----+
+
+Least requested mpg videos
++------------------------------------------------------------------------+-----+
+|request                                                                 |count|
++------------------------------------------------------------------------+-----+
+|GET /shuttle/missions/sts-70/movies/sts-70-launch.mpg                   |1    |
+|HEAD /shuttle/missions/sts-71/movies/sts-71-launch-2.mpg HTTP/1.0       |1    |
+|GET /shuttle/missions/sts-70/movies/sts-70-landing-approach.mpg HTTP/1.0|1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-rollout.mpg   HTTP/1.0       |1    |
+|GET /shuttle/countdown/lps/sts-71-s-5-i4.mpg HTTP/1.0                   |1    |
+|GET /shuttle/countdown/lps/sts-71-s-5-i2.mpg HTTP/1.0                   |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-undocking.mpg                |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-hand-shake.mpg               |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg HTTP/1.0        |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-2.mpg   HTTP/1.0      |1    |
+|GET /wxworld/mpegs/MPEG6pNgmSfc9/95072712_48.mpg HTTP/1.0               |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-hatch-open.mpg               |1    |
++------------------------------------------------------------------------+-----+
+
+Combining both most and least
++-------------------------------------------------------------------------+-----+
+|request                                                                  |count|
++-------------------------------------------------------------------------+-----+
+|GET /shuttle/missions/sts-70/movies/woodpecker.mpg HTTP/1.0              |3145 |
+|GET /shuttle/missions/sts-71/movies/crew-arrival-t38.mpg HTTP/1.0        |2594 |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch.mpg HTTP/1.0           |1979 |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg HTTP/1.0         |1910 |
+|GET /shuttle/missions/sts-71/movies/sts-71-tcdt-crew-walkout.mpg HTTP/1.0|1758 |
+|GET /shuttle/missions/sts-71/movies/sts-71-mir-dock.mpg HTTP/1.0         |1556 |
+|GET /history/apollo/apollo-13/movies/apo13damage.mpg HTTP/1.0            |1555 |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch.mpg HTTP/1.0           |1523 |
+|GET /shuttle/missions/sts-71/movies/sts-71-mir-dock-2.mpg HTTP/1.0       |993  |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch-srbsep.mpg HTTP/1.0    |964  |
+|GET /history/apollo/apollo-13/movies/apo13launch.mpg HTTP/1.0            |702  |
+|GET /shuttle/missions/sts-53/movies/sts-53-launch.mpg HTTP/1.0           |658  |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch.mpg                    |1    |
+|HEAD /shuttle/missions/sts-71/movies/sts-71-launch-2.mpg HTTP/1.0        |1    |
+|GET /shuttle/missions/sts-70/movies/sts-70-landing-approach.mpg HTTP/1.0 |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-rollout.mpg   HTTP/1.0        |1    |
+|GET /shuttle/countdown/lps/sts-71-s-5-i4.mpg HTTP/1.0                    |1    |
+|GET /shuttle/countdown/lps/sts-71-s-5-i2.mpg HTTP/1.0                    |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-undocking.mpg                 |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-hand-shake.mpg                |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg HTTP/1.0         |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-2.mpg   HTTP/1.0       |1    |
+|GET /wxworld/mpegs/MPEG6pNgmSfc9/95072712_48.mpg HTTP/1.0                |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-hatch-open.mpg                |1    |
++-------------------------------------------------------------------------+-----+
+
+After removing HTTP requests
++-----------------------------------------------------------------+-----+
+|request                                                          |count|
++-----------------------------------------------------------------+-----+
+|GET /shuttle/missions/sts-70/movies/woodpecker.mpg               |3145 |
+|GET /shuttle/missions/sts-71/movies/crew-arrival-t38.mpg         |2594 |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch.mpg            |1979 |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg          |1910 |
+|GET /shuttle/missions/sts-71/movies/sts-71-tcdt-crew-walkout.mpg |1758 |
+|GET /shuttle/missions/sts-71/movies/sts-71-mir-dock.mpg          |1556 |
+|GET /history/apollo/apollo-13/movies/apo13damage.mpg             |1555 |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch.mpg            |1523 |
+|GET /shuttle/missions/sts-71/movies/sts-71-mir-dock-2.mpg        |993  |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch-srbsep.mpg     |964  |
+|GET /history/apollo/apollo-13/movies/apo13launch.mpg             |702  |
+|GET /shuttle/missions/sts-53/movies/sts-53-launch.mpg            |658  |
+|GET /shuttle/missions/sts-70/movies/sts-70-launch.mpg            |1    |
+|HEAD /shuttle/missions/sts-71/movies/sts-71-launch-2.mpg         |1    |
+|GET /shuttle/missions/sts-70/movies/sts-70-landing-approach.mpg  |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-rollout.mpg           |1    |
+|GET /shuttle/countdown/lps/sts-71-s-5-i4.mpg                     |1    |
+|GET /shuttle/countdown/lps/sts-71-s-5-i2.mpg                     |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-undocking.mpg         |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-hand-shake.mpg        |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-3.mpg          |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-launch-2.mpg          |1    |
+|GET /wxworld/mpegs/MPEG6pNgmSfc9/95072712_48.mpg                 |1    |
+|GET /shuttle/missions/sts-71/movies/sts-71-hatch-open.mpg        |1    |
++-----------------------------------------------------------------+-----+
+
+Extracting video name
++-----------------------------+------------------------+
+|video_name                   |total_number_of_requests|
++-----------------------------+------------------------+
+|woodpecker.mpg               |3145                    |
+|crew-arrival-t38.mpg         |2594                    |
+|sts-71-launch.mpg            |1979                    |
+|sts-71-launch-3.mpg          |1910                    |
+|sts-71-tcdt-crew-walkout.mpg |1758                    |
+|sts-71-mir-dock.mpg          |1556                    |
+|apo13damage.mpg              |1555                    |
+|sts-70-launch.mpg            |1523                    |
+|sts-71-mir-dock-2.mpg        |993                     |
+|sts-70-launch-srbsep.mpg     |964                     |
+|apo13launch.mpg              |702                     |
+|sts-53-launch.mpg            |658                     |
+|sts-70-launch.mpg            |1                       |
+|sts-71-launch-2.mpg          |1                       |
+|sts-70-landing-approach.mpg  |1                       |
+|sts-71-rollout.mpg           |1                       |
+|sts-71-s-5-i4.mpg            |1                       |
+|sts-71-s-5-i2.mpg            |1                       |
+|sts-71-undocking.mpg         |1                       |
+|sts-71-hand-shake.mpg        |1                       |
+|sts-71-launch-3.mpg          |1                       |
+|sts-71-launch-2.mpg          |1                       |
+|95072712_48.mpg              |1                       |
+|sts-71-hatch-open.mpg        |1                       |
++-----------------------------+------------------------+
+

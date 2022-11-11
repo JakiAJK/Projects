@@ -1,0 +1,132 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/05/12 12:12:00 INFO SparkContext: Running Spark version 3.2.1
+22/05/12 12:12:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/05/12 12:12:00 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+22/05/12 12:12:00 INFO ResourceUtils: ==============================================================
+22/05/12 12:12:00 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/05/12 12:12:00 INFO ResourceUtils: ==============================================================
+22/05/12 12:12:00 INFO SparkContext: Submitted application: Part 2 Assignment 2
+22/05/12 12:12:00 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/05/12 12:12:00 INFO ResourceProfile: Limiting resource is cpu
+22/05/12 12:12:00 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/05/12 12:12:00 INFO SecurityManager: Changing view acls to: acp21jka
+22/05/12 12:12:00 INFO SecurityManager: Changing modify acls to: acp21jka
+22/05/12 12:12:00 INFO SecurityManager: Changing view acls groups to: 
+22/05/12 12:12:00 INFO SecurityManager: Changing modify acls groups to: 
+22/05/12 12:12:00 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp21jka); groups with view permissions: Set(); users  with modify permissions: Set(acp21jka); groups with modify permissions: Set()
+22/05/12 12:12:00 INFO Utils: Successfully started service 'sparkDriver' on port 38098.
+22/05/12 12:12:00 INFO SparkEnv: Registering MapOutputTracker
+22/05/12 12:12:01 INFO SparkEnv: Registering BlockManagerMaster
+22/05/12 12:12:01 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/05/12 12:12:01 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/05/12 12:12:01 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/05/12 12:12:01 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp21jka/blockmgr-9ad28139-9a0e-4228-b6c7-351036f1752a
+22/05/12 12:12:01 INFO MemoryStore: MemoryStore started with capacity 2.5 GiB
+22/05/12 12:12:01 INFO SparkEnv: Registering OutputCommitCoordinator
+22/05/12 12:12:01 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/05/12 12:12:01 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+22/05/12 12:12:01 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node173.shef.ac.uk:4041
+22/05/12 12:12:01 INFO Executor: Starting executor ID driver on host sharc-node173.shef.ac.uk
+22/05/12 12:12:01 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44650.
+22/05/12 12:12:01 INFO NettyBlockTransferService: Server created on sharc-node173.shef.ac.uk:44650
+22/05/12 12:12:01 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/05/12 12:12:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node173.shef.ac.uk, 44650, None)
+22/05/12 12:12:01 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node173.shef.ac.uk:44650 with 2.5 GiB RAM, BlockManagerId(driver, sharc-node173.shef.ac.uk, 44650, None)
+22/05/12 12:12:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node173.shef.ac.uk, 44650, None)
+22/05/12 12:12:01 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node173.shef.ac.uk, 44650, None)
+/home/acp21jka/.conda/envs/myspark/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+22/05/12 12:12:02 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/05/12 12:12:02 INFO SharedState: Warehouse path is 'file:/data/acp21jka/ScalableML/HPC/spark-warehouse'.
+Ratings.csv
++------+-------+------+----------+
+|userId|movieId|rating|timestamp |
++------+-------+------+----------+
+|1     |296    |5.0   |1147880044|
+|1     |306    |3.5   |1147868817|
+|1     |307    |5.0   |1147868828|
+|1     |665    |5.0   |1147878820|
+|1     |899    |3.5   |1147868510|
+|1     |1088   |4.0   |1147868495|
+|1     |1175   |3.5   |1147868826|
+|1     |1217   |3.5   |1147878326|
+|1     |1237   |5.0   |1147868839|
+|1     |1250   |4.0   |1147868414|
++------+-------+------+----------+
+only showing top 10 rows
+
+The number of unique users are: 162541
+The number of unique movies are: 59047
+#############################################ALS setting 1####################################################
+
+------------------------------split 1--------------------------
+Hot users RMSE for split 1 is 0.7779256044502098
+Cool users RMSE for split 1 is 0.9172214527198757
+/home/acp21jka/.conda/envs/myspark/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/context.py:127: FutureWarning: Deprecated in 3.0.0. Use SparkSession.builder.getOrCreate() instead.
+------------------------------split 2--------------------------
+Hot users RMSE for split 2 is 0.7783982001086464
+Cool users RMSE for split 2 is 0.916523498585337
+------------------------------split 3--------------------------
+Hot users RMSE for split 3 is 0.777901138850895
+Cool users RMSE for split 3 is 0.9216263694961477
+------------------------------split 4--------------------------
+Hot users RMSE for split 4 is 0.7785465960650048
+Cool users RMSE for split 4 is 0.9147525242288161
+------------------------------split 5--------------------------
+Hot users RMSE for split 5 is 0.7783283706644275
+Cool users RMSE for split 5 is 0.91879850429825
+#############################################ALS setting 2####################################################
+
+------------------------------split 1--------------------------
+Hot users RMSE for split 1 is 0.8172770790658604
+Cool users RMSE for split 1 is 0.9483272719207912
+------------------------------split 2--------------------------
+Hot users RMSE for split 2 is 0.8176550465588097
+Cool users RMSE for split 2 is 0.9501616453666933
+------------------------------split 3--------------------------
+Hot users RMSE for split 3 is 0.817107821666443
+Cool users RMSE for split 3 is 0.9541396107623398
+------------------------------split 4--------------------------
+Hot users RMSE for split 4 is 0.8175477514128218
+Cool users RMSE for split 4 is 0.9460603750581504
+------------------------------split 5--------------------------
+Hot users RMSE for split 5 is 0.8179094487515246
+Cool users RMSE for split 5 is 0.9505319059366907
+ALS 1 hot users RMSE= [0.7779256044502098, 0.7783982001086464, 0.777901138850895, 0.7785465960650048, 0.7783283706644275]
+ALS 2 hot users RMSE= [0.8172770790658604, 0.8176550465588097, 0.817107821666443, 0.8175477514128218, 0.8179094487515246]
+ALS 1 cool users RMSE= [0.9172214527198757, 0.916523498585337, 0.9216263694961477, 0.9147525242288161, 0.91879850429825]
+ALS 2 cool users RMSE= [0.9483272719207912, 0.9501616453666933, 0.9541396107623398, 0.9460603750581504, 0.9505319059366907]
+RMSE for Hot and Cool Users per split per ALS setting
++-----------+---------+------------------+------------------+
+|ALS setting|Split_num|HOT Users RMSE    |COOL Users RMSE   |
++-----------+---------+------------------+------------------+
+|ALS1       |1        |0.7779256044502098|0.9172214527198757|
+|ALS1       |2        |0.7783982001086464|0.916523498585337 |
+|ALS1       |3        |0.777901138850895 |0.9216263694961477|
+|ALS1       |4        |0.7785465960650048|0.9147525242288161|
+|ALS1       |5        |0.7783283706644275|0.91879850429825  |
+|ALS2       |1        |0.8172770790658604|0.9483272719207912|
+|ALS2       |2        |0.8176550465588097|0.9501616453666933|
+|ALS2       |3        |0.817107821666443 |0.9541396107623398|
+|ALS2       |4        |0.8175477514128218|0.9460603750581504|
+|ALS2       |5        |0.8179094487515246|0.9505319059366907|
++-----------+---------+------------------+------------------+
+
+Top and Bottom tags for 2 clusters
++-----------+---------+---------+------------------------------------+
+|Cluster    |Split_num|Top Tag  |Bottom Tag                          |
++-----------+---------+---------+------------------------------------+
+|Largest    |1        |sci-fi   |R:sustained strong stylized violence|
+|2nd largest|1        |classic  |narrated by character               |
+|Largest    |2        |sci-fi   |R:sustained strong stylized violence|
+|2nd largest|2        |action   |Speculative technologies            |
+|Largest    |3        |sci-fi   |R:sustained strong stylized violence|
+|2nd largest|3        |animation|layoffs                             |
+|Largest    |4        |sci-fi   |R:sustained strong stylized violence|
+|2nd largest|4        |classic  |narrated by character               |
+|Largest    |5        |sci-fi   |R:sustained strong stylized violence|
+|2nd largest|5        |action   |naive characters                    |
++-----------+---------+---------+------------------------------------+
+
